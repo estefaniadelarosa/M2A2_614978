@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: small;
+                text-align: left;
+            }
+        </style>
+
+        <meta charset="UTF-8"> <!-- Aceptar acentos en español. -->
+        
+        <title>Registro para un Torneo de Videojuegos.</title>
+
+    </head>
+    <body> 
+        <div class = "titulo">
+            <h1>Registro para un Torneo de Videojuegos. 🎮</h1>
+        </div>
+
+        <hr>
+        <br>
+
+        <form action="registros.html" method="POST">
+        
+        <table border = "1" cellpadding="10">
+            <tr>
+                <!-- TEXT. -->
+                <!-- Nombre obligatorio de 3 a 15 caracteres. -->
+                <th><label for = "nombre">Nombre del jugador:</label></th>
+                <td><input type = "text" id = "nombre" name = "nombre" minlength = "3" maxlength = "15" placeholder="Escribe tu nombre." required></td> 
+            </tr>
+
+            <tr>
+                <!-- EMAIL. -->
+                <!-- Email obligatorio y pattern de correo (@). -->
+                <th><label for = "correo">Correo:</label></th> 
+                <td><input type = "email" id = "correo" name = "correo" pattern = "[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Escribe tu correo." required></td> 
+            </tr>
+
+            <tr>
+                <!-- NUMBER. -->
+                <!-- Edad obligatoria de 12 a 40 años. -->
+                <th><label for = "edad">Edad:</label>
+                <td><input type = "number" id = "edad" name = "edad" min = "12" max = "40" required></td> 
+            </tr>
+
+            <tr>
+                <!-- TEXT. -->
+                <!-- Nickname obligatorio y pattern texto/números. -->
+                <th><label for = "nickname">Nickname:</label></th>
+                <td><input type = "text" id = "nickname" name = "nickname" pattern = "[A-Za-z0-9]+" placeholder="Escribe tu nickname." required></td> 
+            </tr>
+
+            <tr>
+                <!-- RADIO. -->
+                <!-- Selección obligatoria. -->
+                <th><label for = "categoria">Categoría:</label></th> 
+                <td>
+                    <input type = "radio" id = "principiante" name = "categoria" value = "principiante" required>
+                    <label for="principiante">Principiante.</label>
+                    
+                    <input type = "radio" id = "intermedio" name = "categoria" value = "intermedio" required>
+                    <label for="intermedio">Intermedio.</label>
+                    
+                    <input type = "radio" id = "experto" name = "categoria" value = "experto" required>
+                    <label for="experto">Experto.</label>
+                </td>
+            </tr>
+
+            <tr>
+                <!-- CHECKBOX. -->
+                <!-- Libertad de varias opciones disponibles. -->
+                <th><label for = "juegosfav">Juegos Favoritos:</label></th> 
+                <td>
+                    <input type = "checkbox" id = "fifa" name = "juegosfav" value = "fifa" >
+                    <label for="fifa">FIFA.</label>
+                    
+                    <input type = "checkbox" id = "fortnite" name = "juegosfav" value = "fortnite">
+                    <label for="fortnite">Fortnite.</label>
+                    
+                    <input type = "checkbox" id = "mariokart" name = "juegosfav" value = "mariokart">
+                    <label for="mariokart">Mario Kart.</label>
+
+                    <input type = "checkbox" id = "smash" name = "juegosfav" value = "smash">
+                    <label for="smash">Smash Bros.</label></td>
+            </tr>
+
+            <tr>
+                <!-- DATE. -->
+                <!-- Solo fehcas del 2025. -->
+                <th><label for = "fechainscrito">Fecha de Inscripción:</label></th> 
+                <td><input type = "date" id = "fecha" name = "fecha" min = "2025-01-01" max = "2025-12-31"></td>
+            </tr>
+                
+            <tr>  
+                <td colspan="2" style="text-align: center;">
+                    <input type = "submit" value = "Enviar">
+                    <input type = "reset" value = "Restablecer">
+                </td> 
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
